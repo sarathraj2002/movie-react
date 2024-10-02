@@ -14,13 +14,13 @@ const mov_obj=[{MovieName:"ARM",Description:"Action",Director:"Jithin",Language:
     Language:"Kannada",Year:2017}] 
  
   return (
-    <>
+    
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell><h2>MOVIE LIST</h2></TableCell>
-            <TableCell align="left">MovieName</TableCell>
+            
+            <TableCell>MovieName</TableCell>
             <TableCell align="left">Description</TableCell>
             <TableCell align="left">Director</TableCell>
             <TableCell align="left">Language</TableCell>
@@ -30,13 +30,13 @@ const mov_obj=[{MovieName:"ARM",Description:"Action",Director:"Jithin",Language:
         <TableBody>
           {mov_obj.map((row) => (
             <TableRow
-            //   key={row.name}
+              key={row.MovieName}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                
+                {row.MovieName}
               </TableCell>
-              <TableCell align="left">{row.MovieName}</TableCell>
+             
               <TableCell align="left">{row.Description}</TableCell>
               <TableCell align="left">{row.Director}</TableCell>
               <TableCell align="left">{row.Language}</TableCell>
@@ -46,7 +46,7 @@ const mov_obj=[{MovieName:"ARM",Description:"Action",Director:"Jithin",Language:
         </TableBody>
       </Table>
     </TableContainer>
-    </>
+    
   )
 }
 
